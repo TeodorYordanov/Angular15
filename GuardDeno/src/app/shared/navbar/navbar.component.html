@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand">NavBar</span>
+        <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+            <!-- Role Admin -->
+            <ul *ngIf="isAdmin" class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/home']"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/cars']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" >Cars</a>
+                </li>
+            </ul>
+             <!-- Role User -->
+            <ul *ngIf="!isAdmin" class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/home']"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>

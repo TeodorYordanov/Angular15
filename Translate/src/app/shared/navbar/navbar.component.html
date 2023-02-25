@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand">NavBar</span>
+        <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+            aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="'active'"
+                        [routerLinkActiveOptions]="{exact:true}">Home</a>
+                </li>
+            </ul>
+        </div>
+       
+    </div>
+    <div class="dropdown">
+        <button type="button" class="btn btn-margin dropdown-toggle" id="dropdownMenuButton"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+            <img alt="" id="languageSelected" style="width: 20px; height: 20px; cursor: pointer; padding: 0;"
+                src="">
+        </button>
+        <ul class="dropdown-menu" style="min-width: 2rem; padding: 0;">
+            <li class="pt-2 pb-2 dropdown-item" *ngFor="let language of listLanguage"
+                (click)="changeLanguageSelected(language.key)" style="cursor: pointer;">
+                <img [src]="language.url" style="width: 20px; height: 20px; padding: 0;" alt="">
+            </li>
+        </ul>
+    </div>
+</nav>
+

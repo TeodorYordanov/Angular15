@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home">Test</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarExample"
+            aria-colcount="navbarExample" aria-expanded="false" aria-label="navbar botton">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"  id="navbarExample">
+            <ul class="nav nav-pills">
+                <li class="nav-item" #myDiv>
+                    <a class="nav-link" [routerLink]="['/home']"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">Home</a>
+                </li>
+                <li class="nav-item" #myDiv>
+                    <a class="nav-link" [routerLink]="['/cars']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" >Cars</a>
+                </li>                        
+            </ul>
+        </div>
+    </div>
+  </nav>
+  

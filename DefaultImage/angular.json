@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "StateDemo": {
+    "DefaultImage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/state-demo",
+            "outputPath": "dist/default-image",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,13 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -69,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "StateDemo:build:production"
+              "browserTarget": "DefaultImage:build:production"
             },
             "development": {
-              "browserTarget": "StateDemo:build:development"
+              "browserTarget": "DefaultImage:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "StateDemo:build"
+            "browserTarget": "DefaultImage:build"
           }
         },
         "test": {
